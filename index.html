@@ -41,13 +41,13 @@
                 <div class="card-form-infos">
                     <h4>Periodo de aluguel:</h4><br>
                     <label>Data de inicio:</label><br>
-                    <input type="text" class="input-form" id="input07"><br>
+                    <input type="date" class="input-form" id="input07"><br>
 
                     <label>Data de término:</label><br>
-                    <input type="text" class="input-form" id="input08"><br>
+                    <input type="date" class="input-form" id="input08"><br>
 
                     <label>Hora para o locatario acessar o imóvel </label><br>
-                    <input type="text" class="input-form" id="input09"><br>
+                    <input type="time" class="input-form" id="input09"><br>
                 </div>
                 <div class="card-form-infos">
                     <h4>Pagamento do Aluguel:</h4><br>
@@ -55,15 +55,38 @@
                     <input type="text" class="input-form" id="input10"><br>
 
                     <label>Dia do pagamento:</label><br>
-                    <input type="text" class="input-form" id="input11"><br>
+                    <select id="input11">
+                        <option value="5">Dia 05</option>
+                        <option value="10">Dia 10</option>
+                        <option value="12">Dia 12</option>
+                        <option value="15">Dia 15</option>
+                        <option value="20">Dia 20</option>
+                        <option value="25">Dia 25</option>
+                    </select><br>
 
                     <label>Formas de pagamento:</label><br>
-                    <input type="text" class="input-form" id="input12"><br>
+                    <select class="input-form" id="input12">
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="transferência bancária">Transferência bancária</option>
+                        <option value="pix">Pix</option>
+                        <option value="dinheiro, pix ou transferência bancária">Dinheiro, PIX ou transferência bancária</option>
+                      </select>
                 </div>
                 <div class="card-form-infos">
                     <h4>Garantias:</h4><br>
+                    <label>Tipo de garantia:</label><br>
+                    <select id="input16">
+                        <option value="caução">Caução</option>
+                        <option value="fiador">Fiador</option>
+                        <option value="cheque">Cheque</option>
+                    </select><br>
+
                     <label>Valor da garantia:</label><br>
-                    <input type="text" class="input-form" id="input13"><br>
+                    <input type="text" value="0" class="input-form" id="input13"><br>
+
+                    <label>Em caso de fiador:</label>
+                    <input type="text" placeholder="Nome" id="input14">
+                    <input type="text" placeholder="CPF" id="input15">
                 </div>
 
             </div>
@@ -88,7 +111,7 @@
         
                 </div>
                 <div class="locador">
-                    <h4>Obrigações do Locador</h4>
+                    <h4>Obrigações do Locador:</h4>
     
                     <input type="checkbox" id="opcao4" onclick="selecionarOpcao('opcao4', 'locador')"> 
                     <label for="opcao4">- Entregar o imóvel em condições adequadas de habitabilidade.</label><br>
@@ -108,7 +131,10 @@
                     <p class="info-p"><span class="text-inicio">Descrição do Imóvel: </span>O imóvel objeto deste contrato está localizado em <span id="span3"></span> e é descrito como <span id="span4"></span>.</p>
                     <p class="info-p"><span class="text-inicio">Prazo de Locação: </span>O prazo de locação terá início em <span id="span7"></span> e terminará em <span id="span8"></span>. Ambas as datas inclusas. O locatário terá o direito de acessar o imóvel a partir das <span id="span9"></span> do dia de início da locação.</p>
                     <p class="info-p"><span class="text-inicio">Valor do Aluguel: </span>O valor mensal do aluguel será de <span id="span10"></span>. O pagamento deverá ser efetuado até o dia <span id="span11"></span> de cada mês, por meio de <span id="span12"></span>.</p>
-                    <p class="info-p"><span class="text-inicio">Garantia: </span>O locatário deverá fornecer uma garantia no valor de <span id="span13"></span>, a ser paga no ato da assinatura deste contrato. Essa garantia será utilizada para cobrir eventuais danos ao imóvel ou inadimplência por parte do locatário.</p>
+                    <p class="info-p"><span class="text-inicio">Garantia (<span id="span16"></span>): </span>O locatário deverá fornecer uma garantia de <span id="span13"></span> reais, a ser paga no ato da assinatura deste contrato. Essa garantia será utilizada para cobrir eventuais danos ao imóvel ou inadimplência por parte do locatário.<br>
+                        Em caso de fiador, segue as informaçõe: <span id="span14"></span>, do CPF <span id="span15"></span>
+                    </p>
+
                 </div>
                 <div class="form-locatario">
                     <h3>Locatário:</h3>
@@ -131,7 +157,7 @@
          
 
       <script src="/js/script.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+      <script src="/js/jspdf.umd.min.js"></script>
 
 </body>
 </html>

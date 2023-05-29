@@ -26,6 +26,9 @@ function selecionarOpcao(opcao, pessoa) {
     var input11Value = document.getElementById('input11').value;
     var input12Value = document.getElementById('input12').value;
     var input13Value = document.getElementById('input13').value;
+    var input14Value = document.getElementById('input14').value;
+    var input15Value = document.getElementById('input15').value;
+    var input16Value = document.getElementById('input16').value;
 
   
     document.getElementById('span1').textContent = input01Value;
@@ -41,16 +44,20 @@ function selecionarOpcao(opcao, pessoa) {
     document.getElementById('span11').textContent = input11Value;
     document.getElementById('span12').textContent = input12Value;
     document.getElementById('span13').textContent = input13Value;
+    document.getElementById('span14').textContent = input14Value;
+    document.getElementById('span15').textContent = input15Value;
+    document.getElementById('span16').textContent = input16Value;
   }
 
 
 
   function gerarPDF() {
     var doc = new jsPDF();
-    var selecionadasDiv = document.getElementById('selecionadas');
-    var conteudo = selecionadasDiv.innerText;
+    var selecionadasDiv = document.getElementById("selecionadas");
     
-    doc.text(conteudo, 10, 10);
-    doc.save('conteudo.pdf');
-}
+    doc.fromHTML(selecionadasDiv, 10, 10, {
+      'elementHandlers': {}
+    });
   
+    doc.save("contrato.pdf");
+  }
