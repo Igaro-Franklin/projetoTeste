@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Teste v1.0</title>
+</head>
+<body>
+    <section>
+        <div class="form-contrato">
+            <div class="title">
+                <h1>Informações para preencher:</h1>
+            </div>
+            <div class="card-form">
+                <div class="card-form-infos">
+                    <h4>Locatário:</h4><br>
+                    <label>Nome do Locatário:</label><br>
+                    <input type="text" class="input-form" id="input01"><br>
+
+                    <label>CPF do Locatário:</label><br>
+                    <input type="text" class="input-form" id="input02"><br>
+                </div>
+                <div class="card-form-infos">
+                    <h4>Locador:</h4><br>
+                    <label>Nome do Locador:</label><br>
+                    <input type="text" class="input-form" id="input05"><br>
+
+                    <label>CPF do Locador:</label><br>
+                    <input type="text" class="input-form" id="input06"><br>
+                </div>
+                <div class="card-form-infos">
+                    <h4>Propriedade:</h4><br>
+                    <label>Endereço completo do aluguel:</label><br>
+                    <input type="text" class="input-form" id="input03"><br>
+
+                    <label>Descrição detalhada (nº de quartos, nº de banheiros, areas comuns, etc...):</label><br>
+                    <input type="text" class="input-form" id="input04"><br>
+                </div>
+                <div class="card-form-infos">
+                    <h4>Periodo de aluguel:</h4><br>
+                    <label>Data de inicio:</label><br>
+                    <input type="text" class="input-form" id="input07"><br>
+
+                    <label>Data de término:</label><br>
+                    <input type="text" class="input-form" id="input08"><br>
+
+                    <label>Hora para o locatario acessar o imóvel </label><br>
+                    <input type="text" class="input-form" id="input09"><br>
+                </div>
+                <div class="card-form-infos">
+                    <h4>Pagamento do Aluguel:</h4><br>
+                    <label>Valor:</label><br>
+                    <input type="text" class="input-form" id="input10"><br>
+
+                    <label>Dia do pagamento:</label><br>
+                    <input type="text" class="input-form" id="input11"><br>
+
+                    <label>Formas de pagamento:</label><br>
+                    <input type="text" class="input-form" id="input12"><br>
+                </div>
+                <div class="card-form-infos">
+                    <h4>Garantias:</h4><br>
+                    <label>Valor da garantia:</label><br>
+                    <input type="text" class="input-form" id="input13"><br>
+                </div>
+
+            </div>
+            
+            <button onclick="exibirValores()">Enviar informações</button>
+        </div>
+
+        <div class="contrato">
+            <div class="clausulas">
+                <h3>Cláusulas:</h3>
+                <div class="locatario">
+                    <h4>Obrigações do Locatário:</h4>
+    
+                    <input type="checkbox" id="opcao1" onclick="selecionarOpcao('opcao1', 'locatario')"> 
+                    <label for="opcao1">- Utilizar o imóvel somente para fins residenciais.</label><br>
+    
+                    <input type="checkbox" id="opcao2" onclick="selecionarOpcao('opcao2', 'locatario')"> 
+                    <label for="opcao2">- Pagar o aluguel mensalmente até a data estipulada.</label><br>
+    
+                    <input type="checkbox" id="opcao3" onclick="selecionarOpcao('opcao3', 'locatario')"> 
+                    <label for="opcao3">- Manter o imóvel limpo e em bom estado de conservação.</label><br>
+        
+                </div>
+                <div class="locador">
+                    <h4>Obrigações do Locador</h4>
+    
+                    <input type="checkbox" id="opcao4" onclick="selecionarOpcao('opcao4', 'locador')"> 
+                    <label for="opcao4">- Entregar o imóvel em condições adequadas de habitabilidade.</label><br>
+                    
+                    <input type="checkbox" id="opcao5" onclick="selecionarOpcao('opcao5', 'locador')"> 
+                    <label for="opcao5">- Realizar os reparos necessários nas áreas comuns e nas estruturas principais do imóvel.</label><br>
+    
+                    <input type="checkbox" id="opcao6" onclick="selecionarOpcao('opcao6', 'locador')"> 
+                    <label for="opcao6">- Respeitar a privacidade do locatário e não realizar visitas sem aviso prévio, exceto em casos de emergência</label><br>
+                </div>
+    
+              </div>
+              
+            <div id="selecionadas" class="selecionada">
+                <div class="info-contrato">
+                    <p class="info-p"><span class="text-inicio">Partes do Contrato: </span>Este contrato é celebrado entre o locador <span id="span1"></span> (CPF: <span id="span2"></span> ) e o locatário <span id="span5"></span> (CPF: <span id="span6"></span> ).</p>
+                    <p class="info-p"><span class="text-inicio">Descrição do Imóvel: </span>O imóvel objeto deste contrato está localizado em <span id="span3"></span> e é descrito como <span id="span4"></span>.</p>
+                    <p class="info-p"><span class="text-inicio">Prazo de Locação: </span>O prazo de locação terá início em <span id="span7"></span> e terminará em <span id="span8"></span>. Ambas as datas inclusas. O locatário terá o direito de acessar o imóvel a partir das <span id="span9"></span> do dia de início da locação.</p>
+                    <p class="info-p"><span class="text-inicio">Valor do Aluguel: </span>O valor mensal do aluguel será de <span id="span10"></span>. O pagamento deverá ser efetuado até o dia <span id="span11"></span> de cada mês, por meio de <span id="span12"></span>.</p>
+                    <p class="info-p"><span class="text-inicio">Garantia: </span>O locatário deverá fornecer uma garantia no valor de <span id="span13"></span>, a ser paga no ato da assinatura deste contrato. Essa garantia será utilizada para cobrir eventuais danos ao imóvel ou inadimplência por parte do locatário.</p>
+                </div>
+                <div class="form-locatario">
+                    <h3>Locatário:</h3>
+                    <h4>O locatário concorda em:</h4>
+                    <p id="locatario"></p>
+                </div>
+                  
+                <div class="form-locador">
+                    <h3>Locador:</h3>
+                    <h4>O locador concorda em:</h4>
+                    <p id="locador"></p>
+                </div>
+
+                <button onclick="gerarPDF()">Baixar PDF</button>
+            </div>
+              
+              
+        </div>
+    </section>
+         
+
+      <script src="/js/script.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+
+</body>
+</html>

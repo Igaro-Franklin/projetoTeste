@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240, 240, 240);
+}
+
+.form-contrato{
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+    align-items: center;
+}
+
+.form-contrato button{
+    margin: 15px;
+    width: 200px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all .6s;
+    cursor: pointer;
+}
+
+.form-contrato button:hover{
+    background-color: rgb(71, 71, 71);
+}
+
+.card-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-form-infos{
+    flex-direction: column;
+    padding: 10px 20px;
+    align-items: center;
+    margin: 5px;
+    border: 3px double;
+}
+
+.card-form-infos h4{
+    margin-top: 15px;
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.card-form-infos label{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2px 0;
+}
+
+.card-form-infos input{
+    margin: 5px 10px;
+    border-radius: 10px;
+    height: 20px;
+    padding: 2px 5px;
+}
+
+.contrato{
+    margin: 10px;
+    display: flex;
+}
+
+.clausulas{
+    width: 46%;
+    margin: 2%;
+}
+
+.selecionada{
+    width: 46%;
+    margin: 2%;
+}
+
+.info-contrato{
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.info-p{
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.text-inicio{
+    font-weight: bold;
+}
+
+#span1, #span2, #span3, #span4,
+#span5, #span6, #span7, #span8,
+#span9, #span10, #span11, #span12, #span13{
+    background-color: rgb(216, 216, 216);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.clausulas h3{
+    font-size: 26px;
+    margin: 0 0 20px;
+    text-decoration: underline;
+}
+
+.clausulas h4{
+    margin: 5px;
+}
+
+.form-locatario h3, .form-locador h3{
+    font-size: 22px;
+    margin: 15px 0;
+    color: blue;
+}
+
+.form-locatario h4, .form-locador h4{
+    margin: 10px;
+}
+
+.selecionada button{
+    width: 20%;
+    height: 30px;
+    margin: 30px 40%;
+    border: none;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    cursor: pointer;
+    transition: all .6s;
+}
+
+.selecionada button:hover{
+    border: 4px double white;
+    transform: scale(1.2);
+}
