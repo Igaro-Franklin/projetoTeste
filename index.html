@@ -20,7 +20,7 @@
                     <input type="text" class="input-form" id="input01"><br>
 
                     <label>CPF do Locatário:</label><br>
-                    <input type="text" class="input-form" id="input02"><br>
+                    <input type="text" class="input-form" id="input02" maxlength="11"><br>
                 </div>
                 <div class="card-form-infos">
                     <h4>Locador:</h4><br>
@@ -28,7 +28,7 @@
                     <input type="text" class="input-form" id="input05"><br>
 
                     <label>CPF do Locador:</label><br>
-                    <input type="text" class="input-form" id="input06"><br>
+                    <input type="text" class="input-form" id="input06" maxlength="11"><br>
                 </div>
                 <div class="card-form-infos">
                     <h4>Propriedade:</h4><br>
@@ -86,7 +86,7 @@
 
                     <label>Em caso de fiador:</label>
                     <input type="text" placeholder="Nome" id="input14">
-                    <input type="text" placeholder="CPF" id="input15">
+                    <input type="text" placeholder="CPF" id="input15" maxlength="11" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
                 </div>
 
             </div>
