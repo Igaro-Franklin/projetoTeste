@@ -40,10 +40,10 @@ function selecionarOpcao(opcao, pessoa) {
     document.getElementById('span7').textContent = input07Value;
     document.getElementById('span8').textContent = input08Value;
     document.getElementById('span9').textContent = input09Value;
-    document.getElementById('span10').textContent = input10Value;
+    document.getElementById('span10').textContent = "R$ " + input10Value + " reais";
     document.getElementById('span11').textContent = input11Value;
     document.getElementById('span12').textContent = input12Value;
-    document.getElementById('span13').textContent = input13Value;
+    document.getElementById('span13').textContent = "R$ " + input13Value;
     document.getElementById('span14').textContent = input14Value;
     document.getElementById('span15').textContent = input15Value;
     document.getElementById('span16').textContent = input16Value;

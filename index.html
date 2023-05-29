@@ -15,7 +15,7 @@
             </div>
             <div class="card-form">
                 <div class="card-form-infos">
-                    <h4>Locatário:</h4><br>
+                    <h4>Dono da casa:</h4><br>
                     <label>Nome do Locatário:</label><br>
                     <input type="text" class="input-form" id="input01"><br>
 
@@ -23,7 +23,7 @@
                     <input type="text" class="input-form" id="input02" maxlength="11"><br>
                 </div>
                 <div class="card-form-infos">
-                    <h4>Locador:</h4><br>
+                    <h4>Inquilino:</h4><br>
                     <label>Nome do Locador:</label><br>
                     <input type="text" class="input-form" id="input05"><br>
 
@@ -46,8 +46,6 @@
                     <label>Data de término:</label><br>
                     <input type="date" class="input-form" id="input08"><br>
 
-                    <label>Hora para o locatario acessar o imóvel </label><br>
-                    <input type="time" class="input-form" id="input09"><br>
                 </div>
                 <div class="card-form-infos">
                     <h4>Pagamento do Aluguel:</h4><br>
@@ -98,7 +96,7 @@
             <div class="clausulas">
                 <h3>Cláusulas:</h3>
                 <div class="locatario">
-                    <h4>Obrigações do Locatário:</h4>
+                    <h4>Obrigações do dono da casa:</h4>
     
                     <input type="checkbox" id="opcao1" onclick="selecionarOpcao('opcao1', 'locatario')"> 
                     <label for="opcao1">- Utilizar o imóvel somente para fins residenciais.</label><br>
@@ -111,7 +109,7 @@
         
                 </div>
                 <div class="locador">
-                    <h4>Obrigações do Locador:</h4>
+                    <h4>Obrigações do Inquilino:</h4>
     
                     <input type="checkbox" id="opcao4" onclick="selecionarOpcao('opcao4', 'locador')"> 
                     <label for="opcao4">- Entregar o imóvel em condições adequadas de habitabilidade.</label><br>
@@ -129,7 +127,7 @@
                 <div class="info-contrato">
                     <p class="info-p"><span class="text-inicio">Partes do Contrato: </span>Este contrato é celebrado entre o locador <span id="span1"></span> (CPF: <span id="span2"></span> ) e o locatário <span id="span5"></span> (CPF: <span id="span6"></span> ).</p>
                     <p class="info-p"><span class="text-inicio">Descrição do Imóvel: </span>O imóvel objeto deste contrato está localizado em <span id="span3"></span> e é descrito como <span id="span4"></span>.</p>
-                    <p class="info-p"><span class="text-inicio">Prazo de Locação: </span>O prazo de locação terá início em <span id="span7"></span> e terminará em <span id="span8"></span>. Ambas as datas inclusas. O locatário terá o direito de acessar o imóvel a partir das <span id="span9"></span> do dia de início da locação.</p>
+                    <p class="info-p"><span class="text-inicio">Prazo de Locação: </span>O prazo de locação terá início em <span id="span7"></span> e terminará em <span id="span8"></span>. Ambas as datas inclusas.</p>
                     <p class="info-p"><span class="text-inicio">Valor do Aluguel: </span>O valor mensal do aluguel será de <span id="span10"></span>. O pagamento deverá ser efetuado até o dia <span id="span11"></span> de cada mês, por meio de <span id="span12"></span>.</p>
                     <p class="info-p"><span class="text-inicio">Garantia (<span id="span16"></span>): </span>O locatário deverá fornecer uma garantia de <span id="span13"></span> reais, a ser paga no ato da assinatura deste contrato. Essa garantia será utilizada para cobrir eventuais danos ao imóvel ou inadimplência por parte do locatário.<br>
                         Em caso de fiador, segue as informaçõe: <span id="span14"></span>, do CPF <span id="span15"></span>
@@ -137,14 +135,14 @@
 
                 </div>
                 <div class="form-locatario">
-                    <h3>Locatário:</h3>
-                    <h4>O locatário concorda em:</h4>
+                    <h3>Dono da casa:</h3>
+                    <h4>O dono da casa concorda em:</h4>
                     <p id="locatario"></p>
                 </div>
                   
                 <div class="form-locador">
-                    <h3>Locador:</h3>
-                    <h4>O locador concorda em:</h4>
+                    <h3>Inquilino:</h3>
+                    <h4>O Inquilino concorda em:</h4>
                     <p id="locador"></p>
                 </div>
 
